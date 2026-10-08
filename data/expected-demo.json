@@ -1,0 +1,108 @@
+{
+  "engine_version": "rules-v1",
+  "accounts": [
+    {
+      "account_id": "A",
+      "risk_score": 60,
+      "risk_level": "HIGH",
+      "reasons": [
+        {
+          "code": "CIRCULAR_FLOW",
+          "points": 60,
+          "transaction_ids": ["C01", "C02", "C03", "C04"]
+        }
+      ]
+    },
+    {
+      "account_id": "B",
+      "risk_score": 100,
+      "risk_level": "CRITICAL",
+      "reasons": [
+        {
+          "code": "CIRCULAR_FLOW",
+          "points": 60,
+          "transaction_ids": ["C01", "C02", "C03", "C04"]
+        },
+        {
+          "code": "RAPID_PASS_THROUGH",
+          "points": 40,
+          "transaction_ids": ["C01", "C02"]
+        }
+      ]
+    },
+    {
+      "account_id": "C",
+      "risk_score": 100,
+      "risk_level": "CRITICAL",
+      "reasons": [
+        {
+          "code": "CIRCULAR_FLOW",
+          "points": 60,
+          "transaction_ids": ["C01", "C02", "C03", "C04"]
+        },
+        {
+          "code": "RAPID_PASS_THROUGH",
+          "points": 40,
+          "transaction_ids": ["C02", "C03"]
+        }
+      ]
+    },
+    {
+      "account_id": "D",
+      "risk_score": 100,
+      "risk_level": "CRITICAL",
+      "reasons": [
+        {
+          "code": "CIRCULAR_FLOW",
+          "points": 60,
+          "transaction_ids": ["C01", "C02", "C03", "C04"]
+        },
+        {
+          "code": "RAPID_PASS_THROUGH",
+          "points": 40,
+          "transaction_ids": ["C03", "C04"]
+        }
+      ]
+    },
+    {"account_id": "E1", "risk_score": 0, "risk_level": "LOW", "reasons": []},
+    {"account_id": "E2", "risk_score": 0, "risk_level": "LOW", "reasons": []},
+    {"account_id": "E3", "risk_score": 0, "risk_level": "LOW", "reasons": []},
+    {"account_id": "N01", "risk_score": 0, "risk_level": "LOW", "reasons": []},
+    {"account_id": "N02", "risk_score": 0, "risk_level": "LOW", "reasons": []},
+    {"account_id": "N03", "risk_score": 0, "risk_level": "LOW", "reasons": []},
+    {"account_id": "N04", "risk_score": 0, "risk_level": "LOW", "reasons": []},
+    {"account_id": "N05", "risk_score": 0, "risk_level": "LOW", "reasons": []},
+    {"account_id": "N06", "risk_score": 0, "risk_level": "LOW", "reasons": []},
+    {"account_id": "N07", "risk_score": 0, "risk_level": "LOW", "reasons": []},
+    {"account_id": "N08", "risk_score": 0, "risk_level": "LOW", "reasons": []},
+    {"account_id": "N09", "risk_score": 0, "risk_level": "LOW", "reasons": []},
+    {"account_id": "R1", "risk_score": 0, "risk_level": "LOW", "reasons": []},
+    {
+      "account_id": "R2",
+      "risk_score": 40,
+      "risk_level": "MEDIUM",
+      "reasons": [
+        {
+          "code": "RAPID_PASS_THROUGH",
+          "points": 40,
+          "transaction_ids": ["R01", "R02"]
+        }
+      ]
+    },
+    {"account_id": "R3", "risk_score": 0, "risk_level": "LOW", "reasons": []},
+    {"account_id": "S1", "risk_score": 0, "risk_level": "LOW", "reasons": []},
+    {
+      "account_id": "S2",
+      "risk_score": 40,
+      "risk_level": "MEDIUM",
+      "reasons": [
+        {
+          "code": "RAPID_PASS_THROUGH",
+          "points": 40,
+          "transaction_ids": ["S01", "S02"]
+        }
+      ]
+    },
+    {"account_id": "S3", "risk_score": 0, "risk_level": "LOW", "reasons": []}
+  ]
+}
