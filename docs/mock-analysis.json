@@ -1,0 +1,29 @@
+{
+  "engine_version": "rules-v1",
+  "accounts": [
+    {
+      "account_id": "A",
+      "risk_score": 0,
+      "risk_level": "LOW",
+      "reasons": []
+    },
+    {
+      "account_id": "B",
+      "risk_score": 40,
+      "risk_level": "MEDIUM",
+      "reasons": [
+        {
+          "code": "RAPID_PASS_THROUGH",
+          "points": 40,
+          "transaction_ids": ["T1", "T2"]
+        }
+      ]
+    },
+    {
+      "account_id": "C",
+      "risk_score": 0,
+      "risk_level": "LOW",
+      "reasons": []
+    }
+  ]
+}

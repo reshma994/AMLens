@@ -1,0 +1,26 @@
+[
+  {
+    "error": {
+      "code": "INVALID_CSV",
+      "message": "amount must be positive",
+      "row": 2,
+      "field": "amount"
+    }
+  },
+  {
+    "error": {
+      "code": "NOT_FOUND",
+      "message": "Analysis not found",
+      "row": null,
+      "field": null
+    }
+  },
+  {
+    "error": {
+      "code": "ANALYSIS_LIMIT",
+      "message": "Dataset is too dense; upload fewer transactions",
+      "row": null,
+      "field": null
+    }
+  }
+]

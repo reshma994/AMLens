@@ -1,0 +1,70 @@
+{
+  "analysis_id": "demo-001",
+  "created_at": "2026-01-01T12:00:00Z",
+  "engine_version": "rules-v1",
+  "currency": "INR",
+  "summary": {
+    "total_accounts": 3,
+    "total_transactions": 2,
+    "total_volume_minor": 19800000,
+    "alert_count": 1,
+    "high_risk_accounts": 0
+  },
+  "accounts": [
+    {
+      "account_id": "A",
+      "risk_score": 0,
+      "risk_level": "LOW",
+      "reasons": []
+    },
+    {
+      "account_id": "B",
+      "risk_score": 40,
+      "risk_level": "MEDIUM",
+      "reasons": [
+        {
+          "code": "RAPID_PASS_THROUGH",
+          "points": 40,
+          "transaction_ids": ["T1", "T2"]
+        }
+      ]
+    },
+    {
+      "account_id": "C",
+      "risk_score": 0,
+      "risk_level": "LOW",
+      "reasons": []
+    }
+  ],
+  "graph": {
+    "nodes": [
+      {"id": "A"},
+      {"id": "B"},
+      {"id": "C"}
+    ],
+    "edges": [
+      {
+        "id": "T1",
+        "source": "A",
+        "target": "B",
+        "amount_minor": 10000000,
+        "timestamp": "2026-01-01T10:00:00Z"
+      },
+      {
+        "id": "T2",
+        "source": "B",
+        "target": "C",
+        "amount_minor": 9800000,
+        "timestamp": "2026-01-01T10:03:00Z"
+      }
+    ]
+  },
+  "alerts": [
+    {
+      "id": "AL-B",
+      "account_id": "B",
+      "status": "OPEN",
+      "updated_at": "2026-01-01T12:00:00Z"
+    }
+  ]
+}
